@@ -51,7 +51,7 @@ function draw() {
   deltaTimeInSeconds = deltaTime / 1000;
   sceneManager.loop();
   if (sceneManager.currentScene.sceneName === "menu") {
-    if (slider.value()) {
+    if (!slider.value()) {
       currentLanguage = "nepali";
       image(languageFlag[0], windowWidth - 45, 20, 30, 30);
     } else {

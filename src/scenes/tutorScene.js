@@ -11,19 +11,58 @@ class TutorScene {
     this.totalExerciseWordLength = 0;
     this.levelSelectionButtons = [];
 
-    var buttons = [0, 1, 2, 3];
-    buttons.map((i) => {
-      var button = new Button(i + 1, 250 + i * 70, 120, 50, 50);
-      button.callOnMousePress(() => this.startLevel(i));
-      this.levelSelectionButtons.push(button);
-    });
+    // var buttons = [0, 1, 2, 3];
+    // buttons.map((i) => {
+    //   var button = new Button(i + 1, 250 + i * 70, 120, 50, 50);
+    //   button.callOnMousePress(() => this.startLevel(i));
+    //   this.levelSelectionButtons.push(button);
+    // });
+    // Level 0 is swar barna
+    // Level 1 is byanjan barna
+    var button = new Button("Swar Barna", windowWidth / 2, 200, 250, 80);
+    button.callOnMousePress(() => this.startLevel(0));
+    this.levelSelectionButtons.push(button);
+    let buttonWidth = 400,
+      buttonHeight = 80;
+    var button = new Button(
+      "Byanjan Barna (क - ञ)",
+      windowWidth / 2,
+      300,
+      buttonWidth,
+      buttonHeight
+    );
+    button.callOnMousePress(() => this.startLevel(1));
+    this.levelSelectionButtons.push(button);
+    var button = new Button(
+      "Byanjan Barna (ट - न)",
+      windowWidth / 2,
+      400,
+      buttonWidth,
+      buttonHeight
+    );
+    button.callOnMousePress(() => this.startLevel(2));
+    this.levelSelectionButtons.push(button);
+    var button = new Button(
+      "Byanjan Barna (प - व)",
+      windowWidth / 2,
+      500,
+      buttonWidth,
+      buttonHeight
+    );
+    button.callOnMousePress(() => this.startLevel(3));
+    this.levelSelectionButtons.push(button);
+    var button = new Button(
+      "Byanjan Barna (श - ज्ञ)",
+      windowWidth / 2,
+      600,
+      buttonWidth,
+      80
+    );
+    button.callOnMousePress(() => this.startLevel(4));
+    this.levelSelectionButtons.push(button);
 
     this.backButton = new Button("Back", windowWidth / 10, windowHeight * 0.15);
-    this.backButton2 = new Button(
-      "Back",
-      windowWidth / 2,
-      (8 * windowHeight) / 10
-    );
+    this.backButton2 = new Button("Back", windowWidth / 2, 700);
   }
 
   draw() {
@@ -46,7 +85,7 @@ class TutorScene {
       fill(color("white"));
       textFont("Georgia", 32);
       textAlign(LEFT);
-      text("Select Level", 230, 70);
+      text("Select Mode", 230, 70);
 
       this.levelSelectionButtons.map((button) => button.draw());
       this.backButton2.draw();

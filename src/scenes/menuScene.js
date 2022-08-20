@@ -31,15 +31,15 @@ class MenuScene {
   draw() {
     clear();
     background(grass);
-    this.animated.map((animate, index) => {
-      if (this.animateFunction[index] === 0) {
-        animate.drawImageLoop(this.xPosition[index], this.yPosition[index]);
-      } else if (this.animateFunction[index] === 1) {
-        animate.drawImageOnce(this.xPosition[index], this.yPosition[index]);
-      }
-    });
+    // this.animated.map((animate, index) => {
+    //   if (this.animateFunction[index] === 0) {
+    //     animate.drawImageLoop(this.xPosition[index], this.yPosition[index]);
+    //   } else if (this.animateFunction[index] === 1) {
+    //     animate.drawImageOnce(this.xPosition[index], this.yPosition[index]);
+    //   }
+    // });
+    // this.bombs.map((bomb) => bomb.drawBomb());
     this.buttons.map((button) => button.draw());
-    this.bombs.map((bomb) => bomb.drawBomb());
   }
   generateBombs() {
     const player = {
