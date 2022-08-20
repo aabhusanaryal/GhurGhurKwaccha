@@ -45,7 +45,7 @@ class Zombie {
         fill(color("black"));
         var displayText = this.word.substring(this.correctlyTypedString.length);
         if (currentLanguage == "nepali") {
-          displayText = translateToUnicode(displayText);
+          displayText = displayText;
         }
         text(displayText, this.xPosition + 5, this.yPosition - 10 + 10);
       }

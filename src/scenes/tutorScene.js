@@ -68,7 +68,7 @@ class TutorScene {
       fill(color("white"));
       textFont("Georgia", 32);
       text(
-        `Words Type: ${this.zombieManager.zombiesKillCount}/${this.totalExerciseWordLength}`,
+        `Words Typed: ${this.zombieManager.zombiesKillCount}/${this.totalExerciseWordLength}`,
         50,
         70
       );

@@ -26,11 +26,22 @@ class ZombieManager {
         16 * this.typedString.length,
         30
       );
+      rect(
+        this.player.xPosition + windowWidth * 0.05,
+        this.player.yPosition - windowHeight * 0.06 - 30,
+        16 * this.typedString.length,
+        30
+      );
       fill(color("white"));
       text(
         translateToUnicode(this.typedString),
         this.player.xPosition + windowWidth * 0.05,
         this.player.yPosition - windowHeight * 0.05
+      );
+      text(
+        this.typedString,
+        this.player.xPosition + windowWidth * 0.05,
+        this.player.yPosition - windowHeight * 0.05 - 30
       );
     } else {
       rect(
@@ -39,6 +50,7 @@ class ZombieManager {
         16 * this.typedString.length,
         30
       );
+
       fill(color("white"));
       text(
         this.typedString,
@@ -51,7 +63,7 @@ class ZombieManager {
       fill(24, 78, 119, 200);
       rect(
         this.player.xPosition + windowWidth * 0.05,
-        this.player.yPosition - windowHeight * 0.1,
+        this.player.yPosition - windowHeight * 0.1 - 29,
         16 * this.zombieToShoot.word.length,
         30
       );
@@ -59,7 +71,7 @@ class ZombieManager {
       text(
         this.zombieToShoot.word,
         this.player.xPosition + windowWidth * 0.05,
-        this.player.yPosition - windowHeight * 0.09
+        this.player.yPosition - windowHeight * 0.09 - 29
       );
     }
 
