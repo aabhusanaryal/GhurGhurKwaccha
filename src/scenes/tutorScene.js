@@ -93,7 +93,6 @@ class TutorScene {
   }
   generateWords() {
     let words = tutorData[currentLanguage][this.level];
-    console.log(this.level);
     this.totalExerciseWordLength = words.split(" ").length;
     words = words.split(" ").filter((word) => word != "");
     words = words.slice(

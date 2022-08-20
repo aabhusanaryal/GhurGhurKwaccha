@@ -2,8 +2,17 @@ class GameOverTutorScene {
   constructor(sceneManager) {
     this.sceneManager = sceneManager;
     this.sceneName = "gameOverTutor";
-    this.button = new Button("Continue", width / 2, height / 2 + windowHeight/10.8);
+    this.button = new Button(
+      "Continue",
+      width / 2,
+      height / 2 + windowHeight / 10.8
+    );
     this.button.callOnMousePress(() => this.sceneManager.enterScene("tutor"));
+  }
+  keyPressed(key) {
+    if (String(key) === "Enter") {
+      this.sceneManager.enterScene("tutor");
+    }
   }
   draw() {
     clear();

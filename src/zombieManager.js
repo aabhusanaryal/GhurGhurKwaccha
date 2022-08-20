@@ -8,7 +8,7 @@ class ZombieManager {
     this.zombieLane = 5;
     this.zombiesKillCount = 0;
     if (tutorMode) {
-      setTimeout(() => keyboard.open(), 500);
+      setTimeout(() => keyboard.open(), 300);
       this.zombieLane = 3;
     }
     this.bombs = []; //calculate total number of typeable key strokes
