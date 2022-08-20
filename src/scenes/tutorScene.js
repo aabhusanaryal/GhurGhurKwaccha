@@ -11,12 +11,6 @@ class TutorScene {
     this.totalExerciseWordLength = 0;
     this.levelSelectionButtons = [];
 
-    // var buttons = [0, 1, 2, 3];
-    // buttons.map((i) => {
-    //   var button = new Button(i + 1, 250 + i * 70, 120, 50, 50);
-    //   button.callOnMousePress(() => this.startLevel(i));
-    //   this.levelSelectionButtons.push(button);
-    // });
     // Level 0 is swar barna
     // Level 1 is byanjan barna
     var button = new Button("Swar Barna", windowWidth / 2, 200, 250, 80);

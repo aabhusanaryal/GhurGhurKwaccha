@@ -3,11 +3,6 @@ class SceneManager {
     this.scenes = sceneList.map((scene) => new scene(this));
   }
   enterScene(newSceneName) {
-    if (newSceneName !== "menu") {
-      slider.hide();
-    } else {
-      slider && slider.show();
-    }
     if (this.currentScene && this.currentScene.onSceneExit) {
       this.currentScene.onSceneExit();
     }

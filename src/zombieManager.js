@@ -101,7 +101,8 @@ class ZombieManager {
       case " ":
         if (
           this.zombieToShoot &&
-          this.typedString === this.zombieToShoot.word
+          translateToUnicode(this.typedString) ===
+            translateToUnicode(this.zombieToShoot.word)
         ) {
           keyboardAnalytics.setCorrectlyTypedWords(this.zombieToShoot.word);
           // keyboardAnalytics.correctlyTypedWords.push(this.zombieToShoot.word);

@@ -13,10 +13,9 @@ var help_text;
 var credit_image;
 
 var nepaliFont;
-var currentLanguage = "english";
+var currentLanguage = "nepali";
 var keyboard;
 var languageFlag;
-var slider;
 var hover_sound;
 var deathSounds;
 
@@ -40,9 +39,6 @@ function setup() {
   keyboard = new Keyboard("US", currentLanguage);
   sceneManager = new SceneManager(sceneList);
   sceneManager.enterScene("menu");
-  slider = createSlider(0, 1, 0);
-  slider.position(windowWidth - 50, 50);
-  slider.style("width", "30px");
   // hover_sound.play();
 }
 
@@ -50,15 +46,6 @@ function draw() {
   // currentTime = millis();
   deltaTimeInSeconds = deltaTime / 1000;
   sceneManager.loop();
-  if (sceneManager.currentScene.sceneName === "menu") {
-    if (!slider.value()) {
-      currentLanguage = "nepali";
-      image(languageFlag[0], windowWidth - 45, 20, 30, 30);
-    } else {
-      currentLanguage = "english";
-      image(languageFlag[1], windowWidth - 45, 30, 30, 20);
-    }
-  }
 }
 function keyPressed() {
   sceneManager.keyPressed(key);
