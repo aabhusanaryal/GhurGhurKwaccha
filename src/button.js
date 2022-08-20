@@ -3,8 +3,8 @@ class Button {
     this.xpos = xpos;
     this.ypos = ypos;
     this.height = height;
-    this.extendedHeight = 1.2 * height;
-    this.extendedWidth = 1.2 * width;
+    this.extendedHeight = 1.05 * height;
+    this.extendedWidth = 1.05 * width;
     this.width = width;
     this.buttonText = buttonText;
     this.isHover = false;
@@ -13,23 +13,21 @@ class Button {
   callOnMousePress(mousePressFunction) {
     this.mousePressFunction = mousePressFunction;
   }
-
   draw() {
-    if(!this.isHover && this.hover()){
+    if (!this.isHover && this.hover()) {
       hover_sound[0].play();
-      setTimeout (()=>hover_sound[0].stop(),200);  
+      setTimeout(() => hover_sound[0].stop(), 200);
     }
     this.isHover = this.hover();
     if (this.isHover) {
-      fill(129, 182, 34, 128);
+      fill(24, 143, 167);
       rectMode(CENTER);
-      rect(this.xpos, this.ypos, this.extendedWidth, this.extendedHeight, 60);
-    } 
-    else {
+      rect(this.xpos, this.ypos, this.extendedWidth, this.extendedHeight, 10);
+    } else {
       this.isHover = false;
-      fill(6, 26, 64, 200);
+      fill(51, 16, 148);
       rectMode(CENTER);
-      rect(this.xpos, this.ypos, this.width, this.height, 60);
+      rect(this.xpos, this.ypos, this.width, this.height, 10);
     }
     //textSize(25);
     fill(255);
