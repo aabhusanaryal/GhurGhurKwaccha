@@ -93,6 +93,7 @@ class ZombieManager {
     );
 
     keyboard.glow_dim(this.zombies[0].word, this.typedString);
+    this.zombieToShoot.word = this.zombies[0].word;
   }
 
   keyPressed(key) {
@@ -107,6 +108,7 @@ class ZombieManager {
           translateToUnicode(this.typedString) ===
             translateToUnicode(this.zombieToShoot.word)
         ) {
+          // If the typed word is the required word
           keyboardAnalytics.setCorrectlyTypedWords(this.zombieToShoot.word);
           // keyboardAnalytics.correctlyTypedWords.push(this.zombieToShoot.word);
           this.typedString = "";
